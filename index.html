@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>RentMovies</title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="movie, series, streaming, rent, watch, hd" name="keywords">
+  <meta content="Rent movies &amp; series" name="description">
+  <meta content="Cali&amp;Marie" name="author">
+  <!--fav icon -->
+  <link href="assets/img/logo.png" style="width:15px;height:15px" rel="shortcut icon">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- stylesheets -->
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+  <!--  bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <!-- PRE-NAVBAR -->
+    <div class="nav-header">
+      <div class="nav-logo">
+        <img src="assets/img/logo.png" >
+      </div>
+
+      <div class="nav-search">
+        <input class="search" type="search" name="search" placeholder="Search" />
+        <input class="searchsub" type="submit" name="submit" value="Go">
+      </div>
+
+      <div class="nav-infos">☎(+000)123345653</div>
+
+      <div class="nav-login">LOGIN</div>
+    </div>
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#">HOME</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Movies<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#latest">Latest</a></li>
+                <li><a href="#marie">Action</a></li>
+                <li><a href="#marie">Anime</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Series <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#featuredS">Latest</a></li>
+                <li><a href="#featuredS">Action</a></li>
+                <li><a href="#featuredS">Sci-fi</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Mini-chat</a></li>
+            <li><a href="#">Suggestions</a></li>
+            <li style="border-right: solid 1px white;"><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- CAROUSEL BANNER -->
+    <section id="banner">
+
+      <div class="banner-img" id="ban1">
+        <div class="banner-carousel">
+
+          <div class="carousel-item">
+            <button class="carousel-btn" id="left-btn"><</button>
+            <div class="carousel-wrap" id="itmone">
+              <div class="film-title"><h3 id="car-title-itm">TARZAN</h3></div>
+              <div class="film-desc"><p id="car-desc-itm">Lorem ipsum dolor sit amet, consectetur adipis ipsum dolor sit ipsum dolor sit amet</p></div>
+            </div>
+            <button class="carousel-btn" id="right-btn">></button>
+          </div>
+
+        </div>
+      </div>
+
+      <ul id="banner-list">
+        <li class="banner-item">
+          <div class="item-img"><img src="https://www.movierender.com/uploads/thumbs/7866a8f5e-1.jpg" alt="TARZAN"></div>
+          <div class="item-title"><h3>Tarzan</h3></div>
+          <div class="item-desc"><p>Lorem ipsum dolor sit amet, consectetur adipis ipsum dolor sit amet, ipsum dolor sit amet</p></div>
+        </li>
+
+        <li class="banner-item">
+          <div class="item-img"><img src="https://vignette.wikia.nocookie.net/themaximumride/images/a/a4/Max_regular.gif/revision/latest/scale-to-width-down/200?cb=20101202003450" alt="MAXRIDE"></div>
+          <div class="item-title"><h3>Maximum Ride</h3></div>
+          <div class="item-desc"><p>Lorem ipsum dolor sit amet, consectetur adipis ipsum dolor sit amet,  ipsum dolor sit amet consectetur </p></div>
+        </li>
+
+        <li class="banner-item">
+          <div class="item-img"><img src="http://musingsfromus.com/wp-content/uploads/2011/07/ID4-Independence-Day-Movie-Poster.jpg" alt="Inde day"></div>
+          <div class="item-title"><h3>Independance</h3></div>
+          <div class="item-desc"><p>Lorem ipsum dolor sit amet, consectetur adipis ipsum dolor sit amet,  ipsum dolor sit amet consectetur </p></div>
+        </li>
+
+        <li class="banner-item">
+          <div class="item-img"><img src="http://www.blackfilm.com/read/wp-content/uploads/2015/11/Central-Intelligence-Poster-3-300x300.jpg" alt="CI"></div>
+          <div class="item-title"><h3>Central Intelligence</h3></div>
+          <div class="item-desc"><p>Lorem ipsum dolor sit amet, consectetur adipis ipsum dolor sit amet,  ipsum dolor sit amet consectetur a</p></div>
+        </li>
+        <li class="banner-item">
+          <div class="item-img"><img src="http://www.cartoonson.com/_resources/Cartoons/movie/138/image/555x418/ice-age-2.jpg" alt="Ice age"></div>
+          <div class="item-title"><h3>Ice Age</h3></div>
+          <div class="item-desc"><p>Lorem ipsum dolor sit amet, consectetur adipis ipsum dolor sit amet, ipsum dolor sit amet </p></div>
+        </li>
+      </ul>
+
+    </section>
+
+    <!-- LATEST MOVIES -->
+    <section id="latest">
+      <div class="latest-box">
+        <ul class="l-movie" style="margin-left:0;">
+          <li class="l-movie-img"><img src="assets/img/batmanmovie-2017-comedie.jpg" alt="batman"></li>
+          <li class="l-movie-title">Batman movie</li>
+          <li class="l-movie-year">2017</li>
+          <li class="l-movie-genre">Action</li>
+        </ul>
+
+        <ul class="l-movie">
+          <li class="l-movie-img"><img src="assets/img/hostel-2005-thriller.jpg" alt="hostel"></li>
+          <li class="l-movie-title">Hostel</li>
+          <li class="l-movie-year">2005</li>
+          <li class="l-movie-genre">Horror</li>
+        </ul>
+
+        <ul class="l-movie">
+          <li class="l-movie-img"><img src="assets/img/inception-2010-scifi.jpg" alt="inception"></li>
+          <li class="l-movie-title">Inception</li>
+          <li class="l-movie-year">2010</li>
+          <li class="l-movie-genre">Thriller</li>
+        </ul>
+
+        <ul class="l-movie">
+          <li class="l-movie-img"><img src="assets/img/intouchables-2011-comedie.jpg" alt="intouch"></li>
+          <li class="l-movie-title">Intouchables</li>
+          <li class="l-movie-year">2011</li>
+          <li class="l-movie-genre">Drame</li>
+        </ul>
+
+        <ul class="l-movie">
+          <li class="l-movie-img"><img src="assets/img/lesdeuxtours-2002-aventure.jpg" alt="les 2 tours"></li>
+          <li class="l-movie-title">Les deux tours</li>
+          <li class="l-movie-year">2002</li>
+          <li class="l-movie-genre">Fantastique</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FEATURED MOVIES -->
+    <section id="marie">
+      <h2 class="titreBefore">FEATURED MOVIES</h2>
+      <section id="featuredM">
+        <div class="container">
+          <div class="row" id="rowFutured">
+
+            <input type="button" id="allMovies" value="All" class="boutonActive">
+            <input type="button" id="actionMovies" value="Actions" class="boutonHover">
+            <input type="button" id="Aventures" value="Aventures" class="boutonHover">
+            <input type="button" id="policierMovies" Value="Policiers" class="boutonHover">
+          </div>
+
+          <!--  Ligne 1 des films-->
+          <div class="row">
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
+              <h3>God compass</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
+              <h3>Bas Moms</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
+              <h3>Jason Bourne</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
+              <h3>Rezort</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
+              <h3>Peter</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
+              <h3>ISRA 88</h3>
+              <p>2016</p>
+            </div>
+          </div>
+
+          <!--  Ligne 2 des films-->
+          <div class="row">
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
+              <h3>War Dogs</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
+              <h3>The other side</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
+              <h3>Civil war</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
+              <h3>Pets</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
+              <h3>Jungle book</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
+              <h3>Assasin creed</h3>
+              <p>2016</p>
+            </div>
+
+          </div>
+          <input type="button" value="PLUS DE FILMS" id="plusDeFilms">
+
+
+
+        </div>
+
+
+
+      </section>
+
+      <!-- FEATURED SERIES -->
+      <section id="featuredS">
+        <div class="container">
+          <div class="featuredMtitle">
+            <h2 class="titreBefore">FEATURED SERIES</h2>
+          </div>
+          <div class="row" id="rowSerie">
+            <input type="button" id="allSeries" value="All" class="boutonActive">
+            <input type="button" id="actionSeries" value="Actions" class="boutonHover">
+            <input type="button" id="AventuresSeries" value="Aventures" class="boutonHover">
+            <input type="button" id="policierSeries" Value="Policiers" class="boutonHover">
+          </div>
+
+          <!--  Ligne 1 des séries-->
+          <div class="row">
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
+              <h3>God compass</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
+              <h3>Bas Moms</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
+              <h3>Jason Bourne</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
+              <h3>Rezort</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
+              <h3>Peter</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
+              <h3>ISRA 88</h3>
+              <p>2016</p>
+            </div>
+          </div>
+
+          <!--  Ligne 2 des films-->
+          <div class="row">
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
+              <h3>War Dogs</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
+              <h3>The other side</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
+              <h3>Civil war</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
+              <h3>Pets</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
+              <h3>Jungle book</h3>
+              <p>2016</p>
+            </div>
+            <div class="col-xs-6 col-md-2">
+              <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
+              <h3>Assasin creed</h3>
+              <p>2016</p>
+            </div>
+
+          </div>
+          <input type="button" value="PLUS DE SERIES" id="plusDeSeries">
+
+
+
+        </div>
+
+
+      </section>
+
+      <!-- .....................................SHOP MOVIES .......................................-->
+      <section id="shop">
+
+        <div class="container">
+          <div class="row" id="blockVideo">
+            <div id="blockPreviousNext">
+              <p id="previous"><</p>
+              <p id="next">></p></div>
+
+              <div class="embed-responsive embed-responsive-16by9 col-md-6">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WxedhVmh8RM" frameborder="0" gesture="media"></iframe>
+              </div>
+
+              <div class="col-md-6" id="civilWar">
+                <table class="table borderless">
+                  <thead>
+                    <tr>CIVIL WAR CAPTAIN AMERICA</tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Résumé</td>
+                      <td>:</td>
+                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptas id repellendus eaque consequuntur voluptates, dicta distinctio nostrum doloremque iste! Accusamus nemo fugit, dolor alias deleniti facilis debitis? Eaque, iusto?</td>
+                    </tr>
+                    <tr>
+                      <td>Date de sortie</td>
+                      <td>:</td>
+                      <td>May 06, 2016</td>
+                    </tr>
+                    <tr>
+                      <td>Genres</td>
+                      <td>:</td>
+                      <td>Action |Adventure</td>
+                    </tr>
+                    <tr>
+                      <td>Prix</td>
+                      <td>:</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="container noPadding">
+            <div class="row" >
+              <div class="col-xs-6 col-md-2">
+                <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
+                <h3>War Dogs</h3>
+                <p>2016</p>
+              </div>
+              <div class="col-xs-6 col-md-2">
+                <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
+                <h3>The other side</h3>
+                <p>2016</p>
+              </div>
+              <div class="col-xs-6 col-md-2">
+                <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
+                <h3>Civil war</h3>
+                <p>2016</p>
+              </div>
+              <div class="col-xs-6 col-md-2">
+                <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
+                <h3>Pets</h3>
+                <p>2016</p>
+              </div>
+              <div class="col-xs-6 col-md-2">
+                <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
+                <h3>Jungle book</h3>
+                <p>2016</p>
+              </div>
+              <div class="col-xs-6 col-md-2">
+                <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
+                <h3>Assasin creed</h3>
+                <p>2016</p>
+              </div>
+
+            </div>
+          </div>
+
+
+        </section>
+
+      </section>
+      <!-- CONTACT -->
+      <div id="contact-header">
+        <h2 class="titreBefore">Contact</h2>
+      </div>
+
+      <section id="contact">
+        <div class="row">
+
+          <div class="col-xs-6 col-md-3 contact-item">
+
+          </div>
+
+          <div class="col-xs-6 col-md-3 contact-item">
+
+          </div>
+
+          <div class="col-xs-6 col-md-3 contact-item">
+
+          </div>
+
+          <div class="col-xs-6 col-md-3 contact-item">
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+  <script src="assets/js/anim.js"></script>
+  </html>

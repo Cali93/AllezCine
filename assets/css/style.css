@@ -1,0 +1,517 @@
+/* RESET */
+
+html,body{
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: 'Roboto', sans-serif;
+  color:#8F8781;
+  overflow-x: hidden;
+}
+li{list-style: none;}
+a{text-decoration: none; color:inherit;padding: 0px !important;}
+h1,h2,h3,h4,h5 h6 {
+  margin: 0px !important;
+}
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0; padding: 0;
+}
+.noPadding{
+  padding-right:0px !important;
+  padding-left:0px !important;
+}
+
+input {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  background: none;
+  outline: none;
+}
+
+/* HEADER */
+
+header {
+  position: absolute;
+  top: 0;
+  border-top: solid 2px #E58826;
+  width: 100%;
+  z-index: 9 !important;
+}
+.nav-header{
+
+  width: 80%;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.nav-logo img{
+  margin-top: 17.5px;
+}
+
+.nav-search {
+}
+
+.search {
+  border-radius: 20px 0px 0px 20px;
+  width: 300px;
+  height:28px;
+  background: #D0D0D0;
+  margin-top: 22.5px;
+  padding: 5px;
+}
+
+.searchsub {
+  border-radius: 0px 20px 20px 0px;
+  width: 80px;
+  height:28px;
+  background: #24292e;
+  color: white;
+}
+
+.nav-infos {
+  margin-top: 27.5px;
+}
+
+.nav-login {
+  height: 30px;
+  width: auto;
+  background-color: #E58826;
+  color: white;
+  font-weight: bold;
+  margin-top: 22.5px;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+nav {
+  height: 45px !important;
+  width: 100% !important;
+  background-color: #E58826 !important;
+  border: none !important;
+  border-radius: 0px !important;
+  margin: 0px !important;
+  z-index: 1 !important;
+}
+.navbar {
+  position: relative;
+  background-color: #E58826;
+  border-radius: none !important;
+}
+
+#myNavbar {
+  width: 80% !important;
+  margin-left: 53.5%;
+  transform: translateX(-50%);
+}
+
+.navbar-nav li {
+  background-color: #E58826;
+  color: white !important;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  padding-left: 52px;
+  padding-right: 52px;
+  border-left: solid 1px white !important;
+
+}
+
+.navbar-nav li a{
+  color: white !important;
+}
+
+.navbar-nav li:hover{
+  background: #24292e;
+  color: white !important;
+}
+.navbar-nav li a:hover{
+  background: #24292e !important;
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.dropdown-menu li {
+  position: relative !important;
+  z-index: 10 !important;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  background-color: #E58826;
+  border-bottom: solid 1px  white;
+}
+.dropdown-menu li:hover {
+  color: white !important;
+  background: #24292e;
+}
+
+/* MAIN*/
+
+main {
+
+}
+/* CAROUSEL BANNER */
+#banner {
+  display: block;
+  position: absolute;
+  top: 125px;
+  height: 500px;
+  width: 100%;
+  background-color: grey;
+  z-index: 1 !important;
+}
+
+.banner-img {
+  display: none;
+  position: relative;
+  height: 500px;
+  width: 74%;
+  padding-right: 5px;
+  float: left;
+  background-position:right top;
+  z-index: 1;
+}
+
+#ban1 {
+  display: block;
+  background-image: url("http://cinema.mu/wp-content/uploads/2016/07/tarzan-banner.jpg");
+}
+
+#ban2 {
+  display: none;
+  background-image: url("http://cdn.playbuzz.com/cdn/f1e31640-c5f7-4d47-89dd-44bc1026178b/379ea720-da67-4740-8755-5d2b8839aa28.jpg");
+}
+
+.banner-carousel {
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  height: 120px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.film-title {
+  display:block;
+  position: absolute;
+  text-align: center;
+  top: 20px; left: 130px;
+  background-color: #E58826;
+  color: white;
+  width: 250px;
+  height: 50px;
+  font-weight: bold;
+  padding-left: 35px;
+  padding-right: 35px;
+
+}
+
+.film-desc {
+  display:block;
+  position: absolute;
+  top: 70px; left: 105px;
+  color: white;
+  font-weight: bold;
+  padding: 7px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#banner-list{
+  display: inline-block;
+  position: relative;
+  height: 500px;
+  width: 26%;
+  float: left;
+  background-color: black;
+}
+.banner-item{
+  margin-top: 3px;
+  padding: 5px;
+  height: 96.5px;
+  background: #24292e;
+}
+
+.banner-item:hover{
+  background: #E58826;
+  color: #24292e;
+}
+
+.banner-item:hover h3{
+  color: #24292e;
+}
+
+.banner-item h3 {
+  color: #E58826;
+}
+
+.banner-item p {
+  color: white;
+}
+
+.item-img{
+  width: 85px;
+  height: 85px;
+  margin-right: 5px;
+  float: left;
+  background: grey;
+}
+
+.item-img img {
+  width: 85px;
+  height: 85px;
+}
+
+.film-title h3 {
+  margin-top: 13px !important;
+  font-weight: bold;
+}
+
+.carousel-btn {
+  display:inline-block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 7px;
+  border: solid 1px;
+  border-radius: 15px;
+}
+
+.carousel-btn:hover {
+  background: black;
+  opacity: 0.6;
+}
+
+#left-btn {
+  top: 30px; left: 20px;
+  padding: 0px;
+  float: left;
+  border: solid 1px;
+}
+
+#right-btn {
+  top: 30px; right: 20px;
+  padding:0px;
+  float: right;
+  border: solid 1px;
+}
+
+
+/* LATEST MOVIES*/
+#latest {
+  display: block;
+  position: absolute;
+  top: 640px;
+  width: 100%;
+  height: 420px;
+
+}
+
+.latest-box {
+  width: 62.5%;
+  height: 390px;
+  color: #8F8781;
+  border: solid 1px #E0E0E0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 35px;
+}
+
+.l-movie {
+  float: left;
+  margin-left: 50px;
+}
+
+.l-movie-img img{
+  width: 175px;
+  height: 276px;
+  margin-bottom: 5px;
+}
+
+.l-movie-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.l-movie-year {
+  float: left;
+}
+
+.l-movie-genre {
+  float: right;
+  color: #808080;
+}
+
+/* ...................FEATURED MOVIES.......................*/
+
+#marie {
+  display: block;
+  position: absolute;
+  top: 1100px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.titreBefore  {
+  display: block;
+  position: absolute;
+  left: -100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #808080;
+  border-left: solid 5px #E58826;
+}
+
+.row h3 {
+  text-align: center !important;
+}
+
+#rowFutured , #rowSerie{
+  margin-left: 1px;
+  margin-bottom:30px;
+  margin-top:75px;
+}
+.vignette{
+  height:276px !important;
+  width:194px;
+}
+#maximum{
+  height: 598px;
+  width: 1196px;
+}
+
+.boutonActive{
+  background-color: #E58826;
+  width:85px;
+  height:50px;
+  color:white;
+}
+.boutonHover:hover{
+  background-color: #E58826;
+  width:85px;
+  height:50px;
+}
+.boutonHover{
+  background-color: #D0CFD0;
+  width:85px;
+  height:50px;
+}
+
+#plusDeFilms , #plusDeSeries{
+  background-color: #E58826;
+  width:auto;
+  height:50px;
+  display:block;
+  margin:0 auto;
+  padding:5px 15px;
+  color:white;
+}
+
+/*..................... FEATURED SERIES........................*/
+
+#civilWar{
+  background-color: #E58826;
+  height: 300px;
+  padding-top: 21px;
+}
+/* SHOP */
+#shop {
+  margin-top:50px;
+}
+#previous{
+  margin-right:10px;
+}
+#previous , #next{
+  width:35px;
+  height:35px;
+  background-color: black;
+  color:#808080;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+#blockPreviousNext{
+  display:flex;
+  justify-content:flex-end;
+}
+.embed-responsive-item{
+  height: 300px !important;
+}
+.embed-responsive-16by9 {
+  padding-bottom:300px !important;
+}
+#blockVideo{
+  margin-bottom: 15px;
+}
+table > tbody > tr > td:nth-child(1n){
+  color:#4C5155;
+}
+
+table > tbody > tr > td:nth-child(3n){
+  color:white;
+}
+.borderless td, .borderless th {
+  border: none;
+}
+table thead tr th, .table tbody tr td {
+  border: none!important;
+}
+
+.table{
+  border: none;
+}
+
+
+/* CONTACT */
+#contact-header {
+  display: block;
+  position: absolute;
+  top: 3650px;left: 200px;
+  margin-left: 120px;
+}
+
+#contact {
+  position: absolute;
+  top: 3750px;
+  width: 65.3%;
+  height: 800px;
+  color: #8F8781;
+  border: solid 1px #E0E0E0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.contact-item {
+  background-color: #8F8781;
+  width: 258px !important;
+  height: 250px;
+  margin: 25px;
+  margin-top: 40px;
+}
+
+
+/* FOOTER*/
+
+footer {
+
+}
