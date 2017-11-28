@@ -27,7 +27,7 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header>
+  <header id="top">
     <!-- PRE-NAVBAR -->
     <div class="nav-header">
       <div class="nav-logo">
@@ -41,8 +41,105 @@
 
       <div class="nav-infos">☎(+000)123345653</div>
 
-      <div class="nav-login">LOGIN</div>
+      <div class="nav-login" id="login"><p class="text-center"><a href="#" style="text-decoration: none;" class="nav-login" role="button" data-toggle="modal" data-target="#login-modal">LOGIN</a></p></div>
+
     </div>
+
+    <!-- LOGIN FORM -->
+
+    <!-- BEGIN # MODAL LOGIN -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;padding:0px;">
+        	<div class="modal-dialog">
+    			<div class="modal-content">
+    				<div class="modal-header" align="center">
+    					<img class="img-rectangle" id="img_logo" src="assets/img/logo.png">
+    					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    					</button>
+    				</div>
+
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
+
+                        <!-- Begin # Login Form -->
+                        <form id="login-form">
+    		                <div class="modal-body">
+    				    		<div id="div-login-msg">
+                                    <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-login-msg">Type your username and password.</span>
+                                </div>
+    				    		<input id="login_username" class="form-control" type="text" placeholder="Username" required>
+    				    		<input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Remember me
+                                    </label>
+                                </div>
+            		    	</div>
+    				        <div class="modal-footer">
+                                <div>
+                                    <button style="background:#E58826;border:none;margin-bottom:2px;" type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                                </div>
+    				    	    <div>
+                                    <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                    <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                                </div>
+    				        </div>
+                        </form>
+                        <!-- End # Login Form -->
+
+                        <!-- Begin | Lost Password Form -->
+                        <form id="lost-form" style="display:none;">
+        	    		    <div class="modal-body">
+    		    				<div id="div-lost-msg">
+                                    <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-lost-msg">Type your e-mail.</span>
+                                </div>
+    		    				<input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+                			</div>
+    		    		    <div class="modal-footer">
+                                <div>
+                                    <button style="background:#E58826;border:none;margin-bottom:2px;" type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                                </div>
+                                <div>
+                                    <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                                    <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                                </div>
+    		    		    </div>
+                        </form>
+                        <!-- End | Lost Password Form -->
+
+                        <!-- Begin | Register Form -->
+                        <form id="register-form" style="display:none;">
+                		    <div class="modal-body">
+    		    				<div id="div-register-msg">
+                                    <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-register-msg">Register an account.</span>
+                                </div>
+    		    				<input id="register_username" class="form-control" type="text" placeholder="Username " required>
+                                <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                                <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                			</div>
+    		    		    <div class="modal-footer">
+                                <div>
+                                    <button style="background:#E58826;border:none;margin-bottom:2px;" type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                                </div>
+                                <div>
+                                    <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                    <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                </div>
+    		    		    </div>
+                        </form>
+                        <!-- End | Register Form -->
+
+                    </div>
+                    <!-- End # DIV Form -->
+
+    			</div>
+    		</div>
+    	</div>
+        <!-- END # MODAL LOGIN -->
+
     <!-- NAVBAR -->
 
     <nav class="navbar navbar-inverse">
@@ -76,7 +173,7 @@
             <li><a href="#">Forum</a></li>
             <li><a href="#">Mini-chat</a></li>
             <li><a href="#">Suggestions</a></li>
-            <li style="border-right: solid 1px white;"><a href="#">Contact</a></li>
+            <li style="border-right: solid 1px white;"><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -90,31 +187,31 @@
     <section id="banner">
       <div id="slidey" style="display:none;">
           <ul>
-            <li><img src="Carousel/assets/1.jpg">
-              <p class="title">Title 1</p>
-              <p class="description">Description 1</p>
+            <li><img src="Carousel/assets/tarzan-banner.jpg">
+              <p class="title">TARZAN</p>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
             </li>
-            <li><img src="Carousel/assets/2.jpg">
-              <p class="title">Title 2</p>
-              <p class="description">Description 2</p>
-            </li>
-            <li><img src="Carousel/assets/3.jpg">
-              <p class="title">Title 3</p>
-              <p class="description">Description 3</p>
+            <li><img src="Carousel/assets/7.jpg">
+              <p class="title">MAXIMUM RIDE</p>
+              <p class="description"> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm</p>
             </li>
             <li><img src="Carousel/assets/3.jpg">
-              <p class="title">Title 3</p>
-              <p class="description">Description 3</p>
+              <p class="title">ICE AGE</p>
+              <p class="description">odo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur</p>
             </li>
-            <li><img src="Carousel/assets/3.jpg">
-              <p class="title">Title 3</p>
-              <p class="description">Description 3</p>
+            <li><img src="Carousel/assets/4.jpg">
+              <p class="title">INDEPENDANCE DAY</p>
+              <p class="description"> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </li>
+            <li><img src="Carousel/assets/5.jpg">
+              <p class="title">INCEPTION</p>
+              <p class="description"> sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </li>
           </ul>
       </div>
       <script>$("#slidey").slidey();
       $("#slidey").slidey({
-        interval: 3000,
+        interval: 8000,
         listCount: 5,
         showList: true,
         showNodes: false,
@@ -123,7 +220,14 @@
       </script>
 
     </section>
-
+    <div class="social">
+          <ul>
+              <li style="background-color:#1DA1F2;"><a href="https://twitter.com/azeroAC">Twitter <i class="fa fa-twitter"></i></a></li>
+              <li style="background-color:#3B5998;"><a href="https://facebook.com/becode.org/">Facebook <i class="fa fa-facebook"></i></a></li>
+              <li style="background-color:#ea4c89;"><a href="http://dribbble.com/">Dribbble <i class="fa fa-dribbble"></i></a></li>
+              <li style="background-color:#DB4437;"><a href="http://behance.net/">Behance <i class="fa fa-behance"></i></a></li>
+          </ul>
+      </div>
     <!-- LATEST MOVIES -->
     <section id="latest">
       <div class="latest-box container">
@@ -185,70 +289,70 @@
 
           <!--  Ligne 1 des films-->
           <div class="row">
-            <div class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
-              <h3>God compass</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">God compass</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
-              <h3>Bas Moms</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Bas Moms</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
-              <h3>Jason Bourne</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Jason Bourne</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
-              <h3>Rezort</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Rezort</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
-              <h3>Peter</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Peter</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
-              <h3>ISRA 88</h3>
-              <p>2016</p>
-            </div>
+              <li class="l-movie-title">ISRA 88</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
           </div>
 
           <!--  Ligne 2 des films-->
           <div class="row">
-            <div class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
-              <h3>War Dogs</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">War Dogs</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
-              <h3>The other side</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">The other side</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
-              <h3>Civil war</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Civil War</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
-              <h3>Pets</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Pets</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
-              <h3>Jungle book</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Jungle Book</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
-              <h3>Assasin creed</h3>
-              <p>2016</p>
-            </div>
+              <li class="l-movie-title">Assassin's Creed</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
 
           </div>
           <input type="button" value="PLUS DE FILMS" id="plusDeFilms">
@@ -276,70 +380,70 @@
 
           <!--  Ligne 1 des séries-->
           <div class="row">
-            <div class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
-              <h3>God compass</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">God compass</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
-              <h3>Bas Moms</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Bas Moms</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
-              <h3>Jason Bourne</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Jason Bourne</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
-              <h3>Rezort</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Rezort</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
-              <h3>Peter</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Peter</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
-              <h3>ISRA 88</h3>
-              <p>2016</p>
-            </div>
+              <li class="l-movie-title">ISRA 88</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
           </div>
 
           <!--  Ligne 2 des films-->
           <div class="row">
-            <div class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
-              <h3>War Dogs</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">War Dogs</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
-              <h3>The other side</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">The other side</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
-              <h3>Civil war</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Civil War</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
-              <h3>Pets</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Pets</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
-              <h3>Jungle book</h3>
-              <p>2016</p>
-            </div>
-            <div class="col-xs-6 col-md-2">
+              <li class="l-movie-title">Jungle Book</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
-              <h3>Assasin creed</h3>
-              <p>2016</p>
-            </div>
+              <li class="l-movie-title">Assassin's Creed</li>
+              <li class="l-movie-year">2016</li>
+            </ul>
 
           </div>
           <input type="button" value="PLUS DE SERIES" id="plusDeSeries">
@@ -398,37 +502,37 @@
           </div>
 
           <div class="container noPadding">
-            <div class="row" >
-              <div class="col-xs-6 col-md-2">
+            <div class="row">
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
-                <h3>War Dogs</h3>
-                <p>2016</p>
-              </div>
-              <div class="col-xs-6 col-md-2">
+                <li class="l-movie-title">War Dogs</li>
+                <li class="l-movie-year">2016</li>
+              </ul>
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
-                <h3>The other side</h3>
-                <p>2016</p>
-              </div>
-              <div class="col-xs-6 col-md-2">
+                <li class="l-movie-title">The other side</li>
+                <li class="l-movie-year">2016</li>
+              </ul>
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
-                <h3>Civil war</h3>
-                <p>2016</p>
-              </div>
-              <div class="col-xs-6 col-md-2">
+                <li class="l-movie-title">Civil War</li>
+                <li class="l-movie-year">2016</li>
+              </ul>
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
-                <h3>Pets</h3>
-                <p>2016</p>
-              </div>
-              <div class="col-xs-6 col-md-2">
+                <li class="l-movie-title">Pets</li>
+                <li class="l-movie-year">2016</li>
+              </ul>
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
-                <h3>Jungle book</h3>
-                <p>2016</p>
-              </div>
-              <div class="col-xs-6 col-md-2">
+                <li class="l-movie-title">Jungle Book</li>
+                <li class="l-movie-year">2016</li>
+              </ul>
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
-                <h3>Assasin creed</h3>
-                <p>2016</p>
-              </div>
+                <li class="l-movie-title">Assassin's Creed</li>
+                <li class="l-movie-year">2016</li>
+              </ul>
 
             </div>
           </div>
@@ -442,62 +546,126 @@
       <!-- CONTACT -->
 
 
-      <section id="contact">
-        <div class="container">
-        <div class="row">
+    <section id="contact">
+      <div class="container" style="margin:0 auto;padding:0px;">
+        <div id="contact-header">
+          <h2 class="titreBefore">Contact</h2>
+        </div>
+      <div class="row" id="quads">
 
-          <div id="contact-header">
-            <h2 class="titreBefore">Contact</h2>
-          </div>
 
-          <div class="col-xs-6 col-md-3 contact-item">
-            <div class="rondOrange">
-              <span class="glyphicon glyphicon-map-marker"></span>
-            </div>
-            <h4 class="white">Address</h4>
-          </div>
 
-          <div class="col-xs-6 col-md-3 contact-item white">
-            <div class="rondOrange">
-              <span class="glyphicon glyphicon-earphone"></span>
-            </div>
-            <h4>Call</h4>
-            <p>+18044126235</p>
-            <p>+14056489028</p>
-            <p>+12345678910</p>
+        <div class="col-xs-6 col-md-3 contact-item">
+          <div class="rondOrange">
+            <span class="glyphicon glyphicon-map-marker"></span>
           </div>
+          <h4 class="white">Address</h4>
+        </div>
 
-          <div class="col-xs-6 col-md-3 contact-item white">
-            <div class="rondOrange">
-              <span class="glyphicon glyphicon-envelope"></span>
-            </div>
-            <h4 class="white">Email</h4>
-            <p>exemple1@gmail.com</p>
-            <p>exemple2@gmail.com</p>
-            <p>exemple3@gmail.com</p>
+        <div class="col-xs-6 col-md-3 contact-item white">
+          <div class="rondOrange">
+            <span class="glyphicon glyphicon-earphone"></span>
           </div>
+          <h4>Call</h4>
+          <p>+18044126235</p>
+          <p>+14056489028</p>
+          <p>+12345678910</p>
+        </div>
 
-          <div class="col-xs-6 col-md-3 contact-item">
-            <div class="rondOrange">
-              <span class="glyphicon glyphicon-user"></span>
-            </div>
-              <h4 class="white">Social media</h4>
-                  <div class="btn-group btn-group-justified">
-                      <a href="#" class="btn btn-facebook"></a>
-                      <a href="#" class="btn btn-primary">Facebook</a>
-                  </div>
-                  <div class="btn "></div>
+        <div class="col-xs-6 col-md-3 contact-item white">
+          <div class="rondOrange">
+            <span class="glyphicon glyphicon-envelope"></span>
           </div>
+          <h4 class="white">Email</h4>
+          <p>exemple1@gmail.com</p>
+          <p>exemple2@gmail.com</p>
+          <p>exemple3@gmail.com</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3 contact-item">
+          <div class="rondOrange">
+            <span class="glyphicon glyphicon-user"></span>
+          </div>
+            <h4 class="white">Social media</h4>
+                <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn white" id="boutonGaucheFacebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" class="btn white" id="boutonDroitFacebook">Facebook</a>
+                </div>
+                <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn white" id="boutonGaucheTwitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="btn white"  id="boutonGaucheTwitter">Twitter</a>
+                </div>
+                <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn white" id="boutonGaucheGoogle"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a href="#" class="btn white" id="boutonDroitGoogle">Google+</a>
+                </div>
 
         </div>
-        </div>
-      </section>
+      </div>
+      <div class="row">
+        <form class="form-horizontal" action="">
+    <div class="col-md-6">
+      <input type="text" class="form-control inputMargin" placeholder="FIRST NAME" name="firstName">
+    </div>
+    <div class="col-md-6">
+      <input type="text" class="form-control inputMargin" placeholder="LAST NAME" name="lastName">
+    </div>
 
-    </main>
+    <div class="col-md-6">
+      <input type="text" class="form-control inputMargin" placeholder="EMAIL" name="email">
+  </div>
+    <div class="col-md-6">
+      <input type="text" class="form-control inputMargin" placeholder="SUBJECT" name="subject">
+  </div>
+  <div class="col-md-12">
+    <textarea rows="6" cols="144" placeholder="YOUR MESSAGE"></textarea>
+</div>
+
+    <div class="col-md-2">
+      <button type="submit"  id="submit" class="btn btn-default">SEND MESSAGE</button>
+
+  </div>
+</form>
+      </div>
+      </div>
+    </section>
+
+  </main>
 
     <!-- FOOTER -->
     <footer>
+      <section id="footer">
+          <div id="footer-top">
+            <div class="footer-header"><h3>SUBSCRIBE TO US</h3></div>
+              <div class="sub">
+                  <input class="email" type="email" name="email" placeholder="Your email">
+                  <input class="subs" type="submit" name="subscribe" value="SEND">
+              </div>
+              <div class="footer-logo">
+                <img src="assets/img/logo.png" alt="logo">
+              </div>
+            </div>
 
+            <div id="footer-bottom">
+              <div class="footer-nav">
+                <ul>
+                  <li><a href="#">MOVIES</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">ACTION</a></li>
+                  <li><a href="#">ADVENTURE</a></li>
+                  <li><a href="#">COMEDY</a></li>
+                  <li><a href="#">ICONS</a></li>
+                  <li><a href="#">CONTACT US</a></li>
+                </ul>
+              </div>
+              <div class="footer-copyright">
+                <p>® 2011 One Movies All rights reserved | Designed by Marie &amp; Cali</p>
+              </div>
+          </div>
+      </section>
+      <section id="footer-anchor">
+        <!-- <a href="#top"><div class="footerbtn">⇡</div></a> -->
+      </section>
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

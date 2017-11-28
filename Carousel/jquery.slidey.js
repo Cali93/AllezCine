@@ -220,7 +220,7 @@
         base.init();
     };
     $.slidey.defaultOptions = {
-        interval: 3000,
+        interval: 8000,
         listCount: 5,
         showList: true,
         showNodes: false,

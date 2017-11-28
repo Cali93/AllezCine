@@ -7,6 +7,7 @@ html,body{
   font-family: 'Roboto', sans-serif;
   color:#8F8781;
   overflow-x: hidden;
+  padding-right: 0px !important;
 }
 li{list-style: none;}
 a{text-decoration: none; color:inherit;padding: 0px !important;}
@@ -96,6 +97,164 @@ header {
   padding-right: 25px;
 }
 
+#login-modal .modal-dialog {
+    width: 600px;
+}
+
+#login-modal input[type=text], input[type=password] {
+	margin-top: 10px;
+}
+
+#register_login_btn, #register_lost_btn {
+  background-color:  #E58826;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#login_lost_btn, #login_register_btn {
+  background-color:  #E58826;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#lost_login_btn, #lost_register_btn {
+  background-color:  #E58826;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#div-login-msg,
+#div-lost-msg,
+#div-register-msg {
+    border: 1px solid #dadfe1;
+    height: 30px;
+    margin-bottom: 30px;
+    line-height: 28px;
+    transition: all ease-in-out 500ms;
+    text-align: center;
+}
+
+#div-login-msg.success,
+#div-lost-msg.success,
+#div-register-msg.success {
+    border: 1px solid #68c3a3;
+    background-color: #c8f7c5;
+}
+
+#div-login-msg.error,
+#div-lost-msg.error,
+#div-register-msg.error {
+    border: 1px solid #eb575b;
+    background-color: #ffcad1;
+}
+
+#icon-login-msg,
+#icon-lost-msg,
+#icon-register-msg {
+    width: 30px;
+    float: left;
+    line-height: 28px;
+    text-align: center;
+    background-color: #dadfe1;
+    margin-right: 5px;
+    margin-top: 15px;
+    transition: all ease-in-out 500ms;
+}
+
+#icon-login-msg.success,
+#icon-lost-msg.success,
+#icon-register-msg.success {
+    background-color: #68c3a3 !important;
+}
+
+#icon-login-msg.error,
+#icon-lost-msg.error,
+#icon-register-msg.error {
+    background-color: #eb575b !important;
+}
+
+#img_logo {
+    max-height: 100px;
+    max-width: 200px;
+}
+
+/* #########################################
+   #    override the bootstrap configs     #
+   ######################################### */
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .8;
+    overflow-x: hidden;
+}
+
+.modal-content {
+    background-color: #ececec;
+    border: 1px solid #bdc3c7;
+    border-radius: 0px;
+    outline: 0;
+}
+
+.modal-header {
+    min-height: 16.43px;
+    padding: 15px 15px 15px 15px;
+    border-bottom: 0px;
+}
+
+.modal-body {
+    position: relative;
+    padding: 5px 15px 5px 15px;
+}
+
+.modal-footer {
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+    border-top: 0px;
+}
+
+.checkbox {
+    margin-bottom: 0px;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+    border-radius: 0px;
+}
+
+.btn-link {
+    padding: 5px 10px 0px 0px;
+    color: #95a5a6;
+}
+
+.btn-link:hover, .btn-link:focus {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.glyphicon {
+    top: 0px;
+}
+
+.form-control {
+  border-radius: 0px;
+}
+
+
 nav {
   height: 45px !important;
   width: 100% !important;
@@ -168,8 +327,8 @@ main {
   /*position: absolute;
   top: 125px;*/
   height: 400px;
-  width: 100%;
-  background-color: grey;
+  width:100%;
+  background-color: #E58826;
   z-index: 1 !important;
 }
 
@@ -312,6 +471,83 @@ main {
 }
 
 
+/*SOCIAL MEDIA BUTTONS*/
+
+.social {
+  position: fixed;
+  top: 600px;
+  z-index: 1;
+}
+.social ul {
+  padding: 0px;
+  -webkit-transform: translate(-270px, 0);
+  -moz-transform: translate(-270px, 0);
+  -ms-transform: translate(-270px, 0);
+  -o-transform: translate(-270px, 0);
+  transform: translate(-270px, 0);
+}
+.social ul li {
+  display: block;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.36);
+  width: 320px;
+  text-align: right;
+  padding: 10px;
+  -webkit-border-radius: 0 30px 30px 0;
+  -moz-border-radius: 0 30px 30px 0;
+  border-radius: 0 30px 30px 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li:hover {
+  -webkit-transform: translate(110px, 0);
+  -moz-transform: translate(110px, 0);
+  -ms-transform: translate(110px, 0);
+  -o-transform: translate(110px, 0);
+  transform: translate(110px, 0);
+  background: rgba(255, 255, 255, 0.4);
+}
+.social ul li:hover a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.social ul li:hover i {
+  color: #fff;
+  background:#8F8781;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.social ul li i {
+  margin-left: 10px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background: #ffffff;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
 /* LATEST MOVIES*/
 #latest {
   width: 100%;
@@ -341,15 +577,20 @@ main {
 .l-movie-title {
   text-align: center;
   margin-bottom: 10px;
+  font-size: 20px;
+  color: #8F8781;
 }
 
 .l-movie-year {
   float: left;
+  color: #8F8781;
+
 }
 
 .l-movie-genre {
   float: right;
   color: #808080;
+  font-weight: bold;
 }
 
 /* ...................FEATURED MOVIES.......................*/
@@ -469,7 +710,12 @@ table thead tr th, .table tbody tr td {
 
 
 /* ....................CONTACT................................... */
-
+#quads {
+  margin: auto;
+  width: 1250px;
+  margin-left: 51%;
+  transform: translateX(-50%);
+}
 
 #contact {
   height: auto;
@@ -479,8 +725,8 @@ table thead tr th, .table tbody tr td {
 
 .contact-item {
   background-color: #3A3A3A;
-  width: 208px !important;
-  height: 200px;
+  width: 257px !important;
+  height: 230px;
   margin: 25px;
   margin-top: 40px;
 }
@@ -504,10 +750,175 @@ table thead tr th, .table tbody tr td {
   color:white;
 
 }
+#boutonGaucheFacebook{
+  background-color:#2D4A84;
+}
+#boutonDroitFacebook{
+  background-color:#3A5997;
+}
+#boutonGaucheTwitter{
+  background-color:#466F90;
+}
+#boutonDroitTwitter{
+  background-color:#55ABED;
+}
+#boutonGaucheGoogle{
+  background-color:#683F3C;
+}
+#boutonDroitGoogle{
+  background-color:#DC4E42;
+}
+.inputMargin{
+  margin-bottom:10px;
+}
+textarea{
+  border-radius:5px;
+}
+#submit{
+  background-color:#141514;
+  color:white;
+  border-radius:0px;
+  margin-bottom: 30px;
+}
+
+
+
+/*POPUP*/
+#popup{
+  width: 500px;
+  height: 500px;
+  background-color: grey;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+#popupEnfant{
+  display:flex;
+  justify-content:center;
+}
+#age{
+  background-color:white;
+}
+#submitAge{
+    background-color:white;
+}
 
 
 /* FOOTER*/
 
 footer {
+display: block;
+position: relative;
+ width: 100%;
+ height: 300px;
+ background: #24292e;
+}
 
+#footer{
+  position: absolute;
+  height: auto;
+  width: 80%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+#footer-top {
+  width: 100%;
+  height: 110px;
+  border-bottom: solid 2px #8F8781;
+}
+
+.footer-header h3 {
+  font-weight: bold;
+  color: #FF8C1B;
+  font-size: 25px;
+  margin-top: 60px !important;
+  margin-bottom: 10px !important;
+}
+
+.sub {
+  width: 367px !important;
+  border: solid 1px #8F8781;
+  padding: 5px;
+  float: left;
+}
+.email {
+  background: white;
+  color: #8F8781;
+  width: 250px;
+  height: 30px;
+}
+
+.subs {
+ background: #FF8C1B !important;
+ width: 100px;
+ height: 30px;
+ color: white;
+ font-weight: bold;
+
+}
+
+.footer-logo {
+  float: right;
+}
+
+#footer-bottom {
+  width: 100%;
+  height: 95px;
+}
+
+.footer-copyright {
+  margin-top: 30px;
+  float: left;
+  color: #8F8781;
+  font-size: 18px;
+
+}
+
+.footer-nav {
+  float: right;
+  color: white;
+  margin-top: 30px;
+}
+
+.footer-nav li {
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer-nav li a{
+  text-decoration: none;
+  color: white;
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+#footer-anchor {
+  position: absolute;
+  top: 150px;
+  right: 50px;
+  float: right;
+  width: 50px;
+  height: 50px;
+}
+
+#footer-anchor a {
+  text-decoration: none;
+}
+.footerBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  background: #FF8C1B;
+  border: none;
 }
