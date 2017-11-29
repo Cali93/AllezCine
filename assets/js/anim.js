@@ -1,20 +1,136 @@
+// COOKIE
+
+(function(){
+
+  //Change these values
+  let msg = "We use cookies to enhance your web browsing experience. By continuing to browse the site you agree to our policy on cookie usage.";
+  let closeBtnMsg = "OK";
+  let privacyBtnMsg = "Privacy Policy";
+  let privacyLink = "https://www.google.com";
+
+  //check cookies
+  if(document.cookie){
+   let cookieString = document.cookie;
+   let cookieList = cookieString.split(";");
+   // if cookie named OKCookie is found, return
+   for(x = 0; x < cookieList.length; x++){
+     if (cookieList[x].indexOf("OKCookie") != -1){return};
+   }
+  }
+
+  let docRoot = document.body;
+  let okC = document.createElement("div");
+  okC.setAttribute("id", "okCookie");
+  let okCp = document.createElement("p");
+  let okcText = document.createTextNode(msg);
+
+  //close button
+  let okCclose = document.createElement("a");
+  let okcCloseText = document.createTextNode(closeBtnMsg);
+  okCclose.setAttribute("href", "#");
+  okCclose.setAttribute("id", "okClose");
+  okCclose.appendChild(okcCloseText);
+  okCclose.addEventListener("click", closeCookie, false);
+
+  //privacy button
+  let okCprivacy = document.createElement("a");
+  let okcPrivacyText = document.createTextNode(privacyBtnMsg);
+  okCprivacy.setAttribute("href", privacyLink);
+  okCprivacy.setAttribute("id", "okCprivacy");
+  okCprivacy.appendChild(okcPrivacyText);
+
+  //add to DOM
+  okCp.appendChild(okcText);
+  okC.appendChild(okCp);
+  okC.appendChild(okCclose);
+  okC.appendChild(okCprivacy);
+  docRoot.appendChild(okC);
+
+  okC.classList.add("okcBeginAnimate");
+
+  function closeCookie(){
+    let cookieExpire = new Date();
+    cookieExpire.setFullYear(cookieExpire.getFullYear() +2);
+    document.cookie="OKCookie=1; expires=" + cookieExpire.toGMTString() + ";";
+    docRoot.removeChild(okC);
+  }
+
+})();
+
+// Plus de films
+
+let filmsBtn = document.getElementById('plusDeFilms')
+let hiddenM = document.getElementById('hiddenM')
+
+filmsBtn.addEventListener("click", function(){
+    if (hiddenM.style.display === 'none' || hiddenM.style.display === '') {
+      hiddenM.style.display = 'block'
+      filmsBtn.value = 'MOINS DE FILMS'
+    } else {
+      hiddenM.style.display = 'none'
+      filmsBtn.value = 'PLUS DE FILMS'
+    }
+});
+
+// Plus de series
+
+let seriesBtn = document.getElementById('plusDeSeries')
+let hiddenS = document.getElementById('hiddenS')
+
+seriesBtn.addEventListener("click", function(){
+    if (hiddenS.style.display === 'none' || hiddenS.style.display === '') {
+      hiddenS.style.display = 'block'
+      seriesBtn.value = 'MOINS DE SERIES'
+    } else {
+      hiddenS.style.display = 'none'
+      seriesBtn.value = 'PLUS DE SERIES'
+    }
+});
+
+//SHOW ALL MOVIES
+
+let buttonall = document.getElementById('allMovies');
+buttonall.addEventListener ('click',function() {
+  let aventure = document.getElementById('aventure');
+  let action = document.getElementById('actionz');
+  let policier = document.getElementById('policier');
+  if (aventure.style.display === 'none' || action.style.display === 'none' || policier.style.display === 'none'){
+    aventure.style.display = 'block';
+    action.style.display = 'block';
+    policier.style.display = 'block';
+  }
+})
+
+// SHOW ACTION MOVIES
+let buttonAction = document.getElementById('actionMovies');
+buttonAction.addEventListener ('click',function() {
+  let aventure = document.getElementById('aventure');
+  let action = document.getElementById('actionz');
+  let policier = document.getElementById('policier');
+  if (aventure.style.display === 'block' || action.style.display === 'block' || policier.style.display === 'block'){
+    aventure.style.display = 'none';
+    policier.style.display = 'none';
+    action.style.display = 'block';
+  }
+})
+
 // LOGIN BUTTON
 
 $(function() {
 
-    var $formLogin = $('#login-form');
-    var $formLost = $('#lost-form');
-    var $formRegister = $('#register-form');
-    var $divForms = $('#div-forms');
-    var $modalAnimateTime = 300;
-    var $msgAnimateTime = 150;
-    var $msgShowTime = 2000;
+    let $formLogin = $('#login-form');
+    let $formLost = $('#lost-form');
+    let $formRegister = $('#register-form');
+    let $divForms = $('#div-forms');
+    let $modalAnimateTime = 300;
+    let $msgAnimateTime = 150;
+    let $msgShowTime = 2000;
 
     $("form").submit(function () {
         switch(this.id) {
             case "login-form":
-                var $lg_username=$('#login_username').val();
-                var $lg_password=$('#login_password').val();
+                let $lg_username=$('#login_username').val();
+                let $lg_password=$('#login_password').val();
                 if ($lg_username == "ERROR") {
                     msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
                 } else {
@@ -23,7 +139,7 @@ $(function() {
                 return false;
                 break;
             case "lost-form":
-                var $ls_email=$('#lost_email').val();
+                let $ls_email=$('#lost_email').val();
                 if ($ls_email == "ERROR") {
                     msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
                 } else {
@@ -32,9 +148,9 @@ $(function() {
                 return false;
                 break;
             case "register-form":
-                var $rg_username=$('#register_username').val();
-                var $rg_email=$('#register_email').val();
-                var $rg_password=$('#register_password').val();
+                let $rg_username=$('#register_username').val();
+                let $rg_email=$('#register_email').val();
+                let $rg_password=$('#register_password').val();
                 if ($rg_username == "ERROR") {
                     msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
                 } else {
@@ -46,6 +162,7 @@ $(function() {
                 return false;
         }
         return false;
+
     });
 
     $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
@@ -56,8 +173,8 @@ $(function() {
     $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
 
     function modalAnimate ($oldForm, $newForm) {
-        var $oldH = $oldForm.height();
-        var $newH = $newForm.height();
+        let $oldH = $oldForm.height();
+        let $newH = $newForm.height();
         $divForms.css("height",$oldH);
         $oldForm.fadeToggle($modalAnimateTime, function(){
             $divForms.animate({height: $newH}, $modalAnimateTime, function(){
@@ -73,7 +190,7 @@ $(function() {
     }
 
     function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
-        var $msgOld = $divTag.text();
+        let $msgOld = $divTag.text();
         msgFade($textTag, $msgText);
         $divTag.addClass($divClass);
         $iconTag.removeClass("glyphicon-chevron-right");
