@@ -32,10 +32,8 @@
     <div id="popup">
       <div id="enfantPopup">
       <p>Quel est votre age ?</p>
-      <form id="ageFrom">
       <input type="number" id="age" name="age" placeholder="Exemple: 18 (un nombre)">
       <button id="submitAge" name="submitAge" type="submit">OK</button>
-      </form>
       <p id="reponse"></p>
       </div>
 
@@ -44,25 +42,23 @@
 
   <!-- HEADER -->
   <header id="top">
-    <div class="container-fluid">
-      <div class="row">
-      <!-- PRE-NAVBAR -->
-      <div class="nav-header">
-        <div class="col-xs-6 col-lg-3 nav-logo">
-          <img src="assets/img/logo.png" >
-        </div>
 
-        <div class="col-xs-6 col-lg-3 nav-search">
-          <input class="search" type="search" name="search" placeholder="Search" />
-          <input class="searchsub" type="submit" name="submit" value="Go">
-        </div>
-
-        <div class="col-xs-6 col-lg-3 nav-infos">☎(+000)123345653</div>
-
-        <div class="col-xs-6 col-lg-3 nav-login" id="login"><p class="text-center"><a href="#" style="text-decoration: none;" class="nav-login" role="button" data-toggle="modal" data-target="#login-modal">LOGIN</a></p></div>
-        </div>
+    <!-- PRE-NAVBAR -->
+    <div class="nav-header">
+      <div class="nav-logo">
+        <img src="assets/img/logo.png" >
       </div>
-   </div>
+
+      <div class="nav-search">
+        <input class="search" type="search" name="search" placeholder="Search" />
+        <input class="searchsub" type="submit" name="submit" value="Go">
+      </div>
+
+      <div class="nav-infos">☎(+000)123345653</div>
+
+      <div class="nav-login" id="login"><p class="text-center"><a href="#" style="text-decoration: none;" class="nav-login" role="button" data-toggle="modal" data-target="#login-modal">LOGIN</a></p></div>
+
+    </div>
 
     <!-- LOGIN FORM -->
 
@@ -162,7 +158,7 @@
     <!-- NAVBAR -->
 
     <nav class="navbar navbar-inverse">
-      <div class="container-fluid noPadding">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
@@ -171,7 +167,6 @@
           </button>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <div class="row">
           <ul class="nav navbar-nav">
             <li><a href="#">HOME</a></li>
             <li class="dropdown">
@@ -190,13 +185,12 @@
                 <li><a href="#featuredS">Sci-fi</a></li>
               </ul>
             </li>
-            <li class="visible-lg"><a href="#">Forum</a></li>
-            <li class="visible-lg"><a href="#">Mini-chat</a></li>
-            <li class="visible-lg"><a href="#">Suggestions</a></li>
-            <li class="visible-lg-md" style="border-right: solid 1px white;"><a href="#contact">Contact</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Mini-chat</a></li>
+            <li><a href="#">Suggestions</a></li>
+            <li style="border-right: solid 1px white;"><a href="#contact">Contact</a></li>
           </ul>
         </div>
-          </div>
       </div>
     </nav>
 
@@ -302,7 +296,7 @@
           </div>
           <div class="row" id="rowFutured">
 
-            <input type="button" id="allMovies" value="All" class="boutonHover">
+            <input type="button" id="allMovies" value="All" class="boutonActive">
             <input type="button" id="actionMovies" value="Actions" class="boutonHover">
             <input type="button" id="Aventures" value="Aventures" class="boutonHover">
             <input type="button" id="policierMovies" Value="Policiers" class="boutonHover">
@@ -310,76 +304,76 @@
 
           <!--  Ligne 1 des films-->
           <div class="row">
-            <ul class="col-xs-6 col-md-2 aventure">
+            <ul class="col-xs-6 col-md-2 paddingLeft" id="aventure">
               <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">God compass</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventure">
+            <ul class="col-xs-6 col-md-2" id="aventure">
               <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Bad Moms</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 actionz">
+            <ul class="col-xs-6 col-md-2 paddingLeft" id="actionz">
               <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Jason Bourne</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 policier">
+            <ul class="col-xs-6 col-md-2" id="policier">
               <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Rezort</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventure">
+            <ul class="col-xs-6 col-md-2 paddingLeft" id="aventure">
               <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Peter</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 policier">
+            <ul class="col-xs-6 col-md-2" id="policier">
               <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">ISRA 88</li>
               <li class="l-movie-year">2016</li>
             </ul>
-          <!-- </div> -->
+          </div>
 
           <!--  Ligne 2 des films-->
-          <!-- <div class="row"> -->
-            <ul class="col-xs-6 col-md-2 actionz">
-              <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
+          <div class="row">
+            <ul class="col-xs-6 col-md-2 paddingLeft" id="actionz">
+              <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette ">
               <li class="l-movie-title">War Dogs</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventure">
+            <ul class="col-xs-6 col-md-2" id="aventure">
               <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">The other side</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 policier">
-              <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
+            <ul class="col-xs-6 col-md-2 paddingLeft" id="policier">
+              <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette ">
               <li class="l-movie-title">Civil War</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventure">
+            <ul class="col-xs-6 col-md-2" id="aventure">
               <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Pets</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventure">
-              <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
+            <ul class="col-xs-6 col-md-2 paddingLeft" id="aventure">
+              <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette ">
               <li class="l-movie-title">Jungle Book</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 actionz">
+            <ul class="col-xs-6 col-md-2" id="actionz">
               <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Assassin's Creed</li>
               <li class="l-movie-year">2016</li>
             </ul>
 
-          <!-- </div> -->
+          </div>
 
           <div id="hiddenM">
-            <!--  Ligne 3 des films-->
-            <!-- <div class="row"> -->
+            <!--  Ligne 1 des films-->
+            <div class="row">
               <ul class="col-xs-6 col-md-2 aventure">
                 <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">God compass</li>
@@ -410,11 +404,11 @@
                 <li class="l-movie-title">ISRA 88</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-            <!-- </div> -->
+            </div>
 
-            <!--  Ligne 4 des films-->
-            <!-- <div class="row"> -->
-              <ul class="col-xs-6 col-md-2 actionz">
+            <!--  Ligne 2 des films-->
+            <div class="row">
+              <ul class="col-xs-6 col-md-2 actionz paddingLeft">
                 <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">War Dogs</li>
                 <li class="l-movie-year">2016</li>
@@ -424,7 +418,7 @@
                 <li class="l-movie-title">The other side</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 policier">
+              <ul class="col-xs-6 col-md-2 policier paddingLeft">
                 <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Civil War</li>
                 <li class="l-movie-year">2016</li>
@@ -434,7 +428,7 @@
                 <li class="l-movie-title">Pets</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 aventure">
+              <ul class="col-xs-6 col-md-2 aventure paddingLeft">
                 <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Jungle Book</li>
                 <li class="l-movie-year">2016</li>
@@ -459,151 +453,151 @@
             <h2 class="titreBefore">FEATURED SERIES</h2>
           </div>
           <div class="row" id="rowSerie">
-            <input type="button" id="allSeries" value="All" class="boutonHover">
+            <input type="button" id="allSeries" value="All" class="boutonActive">
             <input type="button" id="actionSeries" value="Actions" class="boutonHover">
             <input type="button" id="AventuresSeries" value="Aventures" class="boutonHover">
             <input type="button" id="policierSeries" Value="Policiers" class="boutonHover">
           </div>
 
-          <!--  Ligne 1 des films-->
+          <!--  Ligne 1 des séries-->
           <div class="row">
-            <ul class="col-xs-6 col-md-2 aventureS">
+            <ul class="col-xs-6 col-md-2 paddingLeft">
               <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">God compass</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventureS">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
-              <li class="l-movie-title">Bad Moms</li>
+              <li class="l-movie-title">Bas Moms</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 actionzS">
+            <ul class="col-xs-6 col-md-2 paddingLeft">
               <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Jason Bourne</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 policierS">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Rezort</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventureS">
+            <ul class="col-xs-6 col-md-2 paddingLeft">
               <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Peter</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 policierS">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">ISRA 88</li>
               <li class="l-movie-year">2016</li>
             </ul>
-          <!-- </div> -->
+          </div>
 
           <!--  Ligne 2 des films-->
-          <!-- <div class="row"> -->
-            <ul class="col-xs-6 col-md-2 actionzS">
+          <div class="row">
+            <ul class="col-xs-6 col-md-2 paddingLeft">
               <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">War Dogs</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventureS">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">The other side</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 policierS">
+            <ul class="col-xs-6 col-md-2 paddingLeft">
               <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Civil War</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventureS">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Pets</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 aventureS">
+            <ul class="col-xs-6 col-md-2 paddingLeft">
               <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Jungle Book</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2 actionzS">
+            <ul class="col-xs-6 col-md-2">
               <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Assassin's Creed</li>
               <li class="l-movie-year">2016</li>
             </ul>
 
-          <!-- </div> -->
-
+          </div>
           <div id="hiddenS">
-            <!--  Ligne 3 des films-->
-            <!-- <div class="row"> -->
-              <ul class="col-xs-6 col-md-2 aventureS">
+            <div class="row">
+              <ul class="col-xs-6 col-md-2 paddingLeft">
                 <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">God compass</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 aventureS">
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
-                <li class="l-movie-title">Bad Moms</li>
+                <li class="l-movie-title">Bas Moms</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 actionzS">
+              <ul class="col-xs-6 col-md-2 paddingLeft">
                 <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Jason Bourne</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 policierS">
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Rezort</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 aventureS">
+              <ul class="col-xs-6 col-md-2 paddingLeft">
                 <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Peter</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 policierS">
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">ISRA 88</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-            <!-- </div> -->
+            </div>
 
-            <!--  Ligne 4 des films-->
-            <!-- <div class="row"> -->
-              <ul class="col-xs-6 col-md-2 actionzS">
+            <div class="row">
+              <ul class="col-xs-6 col-md-2 paddingLeft">
                 <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">War Dogs</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 aventureS">
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">The other side</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 policierS">
+              <ul class="col-xs-6 col-md-2 paddingLeft">
                 <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Civil War</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 aventureS">
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Pets</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 aventureS">
+              <ul class="col-xs-6 col-md-2 paddingLeft">
                 <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Jungle Book</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2 actionzS">
+              <ul class="col-xs-6 col-md-2">
                 <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Assassin's Creed</li>
                 <li class="l-movie-year">2016</li>
               </ul>
+
+            </div>
           </div>
-        </div>
           <input type="button" value="PLUS DE SERIES" id="plusDeSeries">
+
+
 
         </div>
 
@@ -620,11 +614,11 @@
               <p id="next">></p></div>
 
               <div class="embed-responsive embed-responsive-16by9 col-md-6">
-                <iframe id="bandeAnnonce" class="embed-responsive-item" src="https://www.youtube.com/embed/WxedhVmh8RM" frameborder="0" gesture="media"></iframe>
+                <iframe id="bandeAnnonce"class="embed-responsive-item" src="https://www.youtube.com/embed/WxedhVmh8RM" frameborder="0" gesture="media"></iframe>
               </div>
 
               <div class="col-md-6" id="civilWar">
-                <table class="table borderless">
+                <table class="table borderless" id="tableau">
                   <thead>
                     <tr>CIVIL WAR CAPTAIN AMERICA</tr>
                   </thead>
@@ -658,7 +652,7 @@
 
           <div class="container noPadding">
             <div class="row">
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 paddingLeft">
                 <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">War Dogs</li>
                 <li class="l-movie-year">2016</li>
@@ -668,7 +662,7 @@
                 <li class="l-movie-title">The other side</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 paddingLeft">
                 <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Civil War</li>
                 <li class="l-movie-year">2016</li>
@@ -678,7 +672,7 @@
                 <li class="l-movie-title">Pets</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 paddingLeft">
                 <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Jungle Book</li>
                 <li class="l-movie-year">2016</li>
@@ -702,22 +696,22 @@
 
 
     <section id="contact">
-      <div class="container" style="margin:0 auto;padding:0px;">
+
+      <div class="container-fluid noPadding">
         <div id="contact-header">
           <h2 class="titreBefore">Contact</h2>
         </div>
-      <!-- <div class="row" id="quads"> -->
 
-
-
-        <div class="col-xs-6 col-md-3 contact-item" style="margin-left:0px;">
+      <div class="row noMargin" id="row">
+        <div id="row2">
+        <div class="col-xs-4 col-md-offset-1 col-md-2 contact-item paddingLeft">
           <div class="rondOrange">
             <span class="glyphicon glyphicon-map-marker"></span>
           </div>
           <h4 class="white">Address</h4>
         </div>
 
-        <div class="col-xs-6 col-md-3 contact-item white">
+        <div class="col-xs-4 col-xs-offset-1 col-md-offset-0 col-md-2 contact-item white">
           <div class="rondOrange">
             <span class="glyphicon glyphicon-earphone"></span>
           </div>
@@ -727,7 +721,7 @@
           <p>+12345678910</p>
         </div>
 
-        <div class="col-xs-6 col-md-3 contact-item white">
+        <div class="col-xs-4 col-md-2 contact-item white paddingLeft">
           <div class="rondOrange">
             <span class="glyphicon glyphicon-envelope"></span>
           </div>
@@ -737,7 +731,7 @@
           <p>exemple3@gmail.com</p>
         </div>
 
-        <div class="col-xs-6 col-md-3 contact-item" style="margin-right:0px;">
+        <div class="col-xs-4 col-xs-offset-1 col-md-offset-0 col-md-2 contact-item" id="itemNoMarginRight">
           <div class="rondOrange">
             <span class="glyphicon glyphicon-user"></span>
           </div>
@@ -755,11 +749,14 @@
                     <a href="#" class="btn white" id="boutonDroitGoogle">Google+</a>
                 </div>
 
-        <!-- </div> -->
+        </div>
       </div>
+    </div>
+
+
       <div class="row">
-        <form class="form-horizontal" action="">
-    <div class="col-md-6">
+        <form class="form-horizontal col-xs-offset-2  col-xs-8" action="">
+    <div class=" col-md-6">
       <input type="text" class="form-control inputMargin" placeholder="FIRST NAME" name="firstName">
     </div>
     <div class="col-md-6">
@@ -773,7 +770,7 @@
       <input type="text" class="form-control inputMargin" placeholder="SUBJECT" name="subject">
   </div>
   <div class="col-md-12">
-    <textarea rows="6" cols="142" placeholder="YOUR MESSAGE"></textarea>
+    <textarea rows="6" cols="146" class="inputMargin form-control" placeholder="YOUR MESSAGE"></textarea>
 </div>
 
     <div class="col-md-2">
