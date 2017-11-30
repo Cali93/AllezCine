@@ -27,25 +27,42 @@
 </head>
 <body>
 
+  <!--.............La fenetre popup pour rentrer l'age.............-->
+    <div id="blockBlanc">
+    <div id="popup">
+      <div id="enfantPopup">
+      <p>Quel est votre age ?</p>
+      <form id="ageFrom">
+      <input type="number" id="age" name="age" placeholder="Exemple: 18 (un nombre)">
+      <button id="submitAge" name="submitAge" type="submit">OK</button>
+      </form>
+      <p id="reponse"></p>
+      </div>
+
+      </div>
+    </div>
+
   <!-- HEADER -->
   <header id="top">
+    <div class="container-fluid">
+      <div class="row">
+      <!-- PRE-NAVBAR -->
+      <div class="nav-header">
+        <div class="col-xs-6 col-lg-3 nav-logo">
+          <img src="assets/img/logo.png" >
+        </div>
 
-    <!-- PRE-NAVBAR -->
-    <div class="nav-header">
-      <div class="nav-logo">
-        <img src="assets/img/logo.png" >
+        <div class="col-xs-6 col-lg-3 nav-search">
+          <input class="search" type="search" name="search" placeholder="Search" />
+          <input class="searchsub" type="submit" name="submit" value="Go">
+        </div>
+
+        <div class="col-xs-6 col-lg-3 nav-infos">☎(+000)123345653</div>
+
+        <div class="col-xs-6 col-lg-3 nav-login" id="login"><p class="text-center"><a href="#" style="text-decoration: none;" class="nav-login" role="button" data-toggle="modal" data-target="#login-modal">LOGIN</a></p></div>
+        </div>
       </div>
-
-      <div class="nav-search">
-        <input class="search" type="search" name="search" placeholder="Search" />
-        <input class="searchsub" type="submit" name="submit" value="Go">
-      </div>
-
-      <div class="nav-infos">☎(+000)123345653</div>
-
-      <div class="nav-login" id="login"><p class="text-center"><a href="#" style="text-decoration: none;" class="nav-login" role="button" data-toggle="modal" data-target="#login-modal">LOGIN</a></p></div>
-
-    </div>
+   </div>
 
     <!-- LOGIN FORM -->
 
@@ -145,7 +162,7 @@
     <!-- NAVBAR -->
 
     <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
+      <div class="container-fluid noPadding">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
@@ -154,6 +171,7 @@
           </button>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
+          <div class="row">
           <ul class="nav navbar-nav">
             <li><a href="#">HOME</a></li>
             <li class="dropdown">
@@ -172,12 +190,13 @@
                 <li><a href="#featuredS">Sci-fi</a></li>
               </ul>
             </li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">Mini-chat</a></li>
-            <li><a href="#">Suggestions</a></li>
-            <li style="border-right: solid 1px white;"><a href="#contact">Contact</a></li>
+            <li class="visible-lg"><a href="#">Forum</a></li>
+            <li class="visible-lg"><a href="#">Mini-chat</a></li>
+            <li class="visible-lg"><a href="#">Suggestions</a></li>
+            <li class="visible-lg-md" style="border-right: solid 1px white;"><a href="#contact">Contact</a></li>
           </ul>
         </div>
+          </div>
       </div>
     </nav>
 
@@ -230,47 +249,47 @@
               <li style="background-color:#DB4437;"><a href="http://behance.net/">Behance <i class="fa fa-behance"></i></a></li>
           </ul>
       </div>
-    <!-- LATEST MOVIES -->
-    <section id="latest">
-      <div class="latest-box container">
-        <div class="row">
-        <ul class="l-movie">
-          <li class="l-movie-img"><img src="assets/img/batmanmovie-2017-comedie.jpg" alt="batman"></li>
-          <li class="l-movie-title">Batman movie</li>
-          <li class="l-movie-year">2017</li>
-          <li class="l-movie-genre">Action</li>
-        </ul>
+      <!-- LATEST MOVIES -->
+        <section id="latest">
+          <div class="latest-box container">
+            <div class="row">
+            <ul class="l-movie" id="batmanModalImage" data-toggle="modal" data-target="#batmanModal">
+              <li class="l-movie-img"><img src="assets/img/batmanmovie-2017-comedie.jpg" alt="batman"></li>
+              <li class="l-movie-title">Batman movie</li>
+              <li class="l-movie-year">2017</li>
+              <li class="l-movie-genre">Action</li>
+            </ul>
 
-        <ul class="l-movie">
-          <li class="l-movie-img"><img src="assets/img/hostel-2005-thriller.jpg" alt="hostel"></li>
-          <li class="l-movie-title">Hostel</li>
-          <li class="l-movie-year">2005</li>
-          <li class="l-movie-genre">Horror</li>
-        </ul>
+            <ul class="l-movie">
+              <li class="l-movie-img" id="hostelModalImage" data-toggle="modal" data-target="#hostelModal"><img src="assets/img/hostel-2005-thriller.jpg" alt="hostel"></li>
+              <li class="l-movie-title">Hostel</li>
+              <li class="l-movie-year">2005</li>
+              <li class="l-movie-genre">Horror</li>
+            </ul>
 
-        <ul class="l-movie">
-          <li class="l-movie-img"><img src="assets/img/inception-2010-scifi.jpg" alt="inception"></li>
-          <li class="l-movie-title">Inception</li>
-          <li class="l-movie-year">2010</li>
-          <li class="l-movie-genre">Thriller</li>
-        </ul>
+            <ul class="l-movie">
+              <li class="l-movie-img" id="inceptionModalImage" data-toggle="modal" data-target="#inceptionModal"><img src="assets/img/inception-2010-scifi.jpg" alt="inception"></li>
+              <li class="l-movie-title">Inception</li>
+              <li class="l-movie-year">2010</li>
+              <li class="l-movie-genre">Thriller</li>
+            </ul>
 
-        <ul class="l-movie">
-          <li class="l-movie-img"><img src="assets/img/intouchables-2011-comedie.jpg" alt="intouch"></li>
-          <li class="l-movie-title">Intouchables</li>
-          <li class="l-movie-year">2011</li>
-          <li class="l-movie-genre">Drame</li>
-        </ul>
+            <ul class="l-movie">
+              <li class="l-movie-img" id="intouchableModalImage" data-toggle="modal" data-target="#intouchableModal"><img src="assets/img/intouchables-2011-comedie.jpg" alt="intouch"></li>
+              <li class="l-movie-title">Intouchables</li>
+              <li class="l-movie-year">2011</li>
+              <li class="l-movie-genre">Drame</li>
+            </ul>
 
-        <ul class="l-movie">
-          <li class="l-movie-img"><img src="assets/img/lesdeuxtours-2002-aventure.jpg" alt="les 2 tours"></li>
-          <li class="l-movie-title">Les deux tours</li>
-          <li class="l-movie-year">2002</li>
-          <li class="l-movie-genre">Fantastique</li>
-        </ul>
-      </div>
-      </div>
-    </section>
+            <ul class="l-movie">
+              <li class="l-movie-img" id="seigneurModalImage" data-toggle="modal" data-target="#seigneurModal"><img src="assets/img/lesdeuxtours-2002-aventure.jpg" alt="les 2 tours"></li>
+              <li class="l-movie-title">Les deux tours</li>
+              <li class="l-movie-year">2002</li>
+              <li class="l-movie-genre">Fantastique</li>
+            </ul>
+          </div>
+          </div>
+        </section>
 
     <!-- FEATURED MOVIES -->
     <section id="marie">
@@ -283,7 +302,7 @@
           </div>
           <div class="row" id="rowFutured">
 
-            <input type="button" id="allMovies" value="All" class="boutonActive">
+            <input type="button" id="allMovies" value="All" class="boutonHover">
             <input type="button" id="actionMovies" value="Actions" class="boutonHover">
             <input type="button" id="Aventures" value="Aventures" class="boutonHover">
             <input type="button" id="policierMovies" Value="Policiers" class="boutonHover">
@@ -291,76 +310,76 @@
 
           <!--  Ligne 1 des films-->
           <div class="row">
-            <ul class="col-xs-6 col-md-2" id="aventure">
+            <ul class="col-xs-6 col-md-2 aventure">
               <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">God compass</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="aventure">
+            <ul class="col-xs-6 col-md-2 aventure">
               <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Bad Moms</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="actionz">
+            <ul class="col-xs-6 col-md-2 actionz">
               <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Jason Bourne</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="policier">
+            <ul class="col-xs-6 col-md-2 policier">
               <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Rezort</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="aventure">
+            <ul class="col-xs-6 col-md-2 aventure">
               <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Peter</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="policier">
+            <ul class="col-xs-6 col-md-2 policier">
               <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">ISRA 88</li>
               <li class="l-movie-year">2016</li>
             </ul>
-          </div>
+          <!-- </div> -->
 
           <!--  Ligne 2 des films-->
-          <div class="row">
-            <ul class="col-xs-6 col-md-2" id="actionz">
+          <!-- <div class="row"> -->
+            <ul class="col-xs-6 col-md-2 actionz">
               <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">War Dogs</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="aventure">
+            <ul class="col-xs-6 col-md-2 aventure">
               <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">The other side</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="policier">
+            <ul class="col-xs-6 col-md-2 policier">
               <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Civil War</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="aventure">
+            <ul class="col-xs-6 col-md-2 aventure">
               <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Pets</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="aventure">
+            <ul class="col-xs-6 col-md-2 aventure">
               <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Jungle Book</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2" id="actionz">
+            <ul class="col-xs-6 col-md-2 actionz">
               <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Assassin's Creed</li>
               <li class="l-movie-year">2016</li>
             </ul>
 
-          </div>
+          <!-- </div> -->
 
           <div id="hiddenM">
-            <!--  Ligne 1 des films-->
-            <div class="row">
+            <!--  Ligne 3 des films-->
+            <!-- <div class="row"> -->
               <ul class="col-xs-6 col-md-2 aventure">
                 <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">God compass</li>
@@ -391,10 +410,10 @@
                 <li class="l-movie-title">ISRA 88</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-            </div>
+            <!-- </div> -->
 
-            <!--  Ligne 2 des films-->
-            <div class="row">
+            <!--  Ligne 4 des films-->
+            <!-- <div class="row"> -->
               <ul class="col-xs-6 col-md-2 actionz">
                 <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">War Dogs</li>
@@ -426,8 +445,8 @@
                 <li class="l-movie-year">2016</li>
               </ul>
           </div>
-          <input type="button" value="PLUS DE FILMS" id="plusDeFilms">
         </div>
+        <input type="button" value="PLUS DE FILMS" id="plusDeFilms">
 
 
 
@@ -440,151 +459,151 @@
             <h2 class="titreBefore">FEATURED SERIES</h2>
           </div>
           <div class="row" id="rowSerie">
-            <input type="button" id="allSeries" value="All" class="boutonActive">
+            <input type="button" id="allSeries" value="All" class="boutonHover">
             <input type="button" id="actionSeries" value="Actions" class="boutonHover">
             <input type="button" id="AventuresSeries" value="Aventures" class="boutonHover">
             <input type="button" id="policierSeries" Value="Policiers" class="boutonHover">
           </div>
 
-          <!--  Ligne 1 des séries-->
+          <!--  Ligne 1 des films-->
           <div class="row">
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 aventureS">
               <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">God compass</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 aventureS">
               <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
-              <li class="l-movie-title">Bas Moms</li>
+              <li class="l-movie-title">Bad Moms</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 actionzS">
               <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Jason Bourne</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 policierS">
               <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Rezort</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 aventureS">
               <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Peter</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 policierS">
               <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">ISRA 88</li>
               <li class="l-movie-year">2016</li>
             </ul>
-          </div>
+          <!-- </div> -->
 
           <!--  Ligne 2 des films-->
-          <div class="row">
-            <ul class="col-xs-6 col-md-2">
+          <!-- <div class="row"> -->
+            <ul class="col-xs-6 col-md-2 actionzS">
               <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">War Dogs</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 aventureS">
               <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">The other side</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 policierS">
               <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Civil War</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 aventureS">
               <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Pets</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 aventureS">
               <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Jungle Book</li>
               <li class="l-movie-year">2016</li>
             </ul>
-            <ul class="col-xs-6 col-md-2">
+            <ul class="col-xs-6 col-md-2 actionzS">
               <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
               <li class="l-movie-title">Assassin's Creed</li>
               <li class="l-movie-year">2016</li>
             </ul>
 
-          </div>
+          <!-- </div> -->
+
           <div id="hiddenS">
-            <div class="row">
-              <ul class="col-xs-6 col-md-2">
+            <!--  Ligne 3 des films-->
+            <!-- <div class="row"> -->
+              <ul class="col-xs-6 col-md-2 aventureS">
                 <img src="assets/img/god.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">God compass</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 aventureS">
                 <img src="assets/img/badMoms.jpg" alt="" class="img-responsive vignette">
-                <li class="l-movie-title">Bas Moms</li>
+                <li class="l-movie-title">Bad Moms</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 actionzS">
                 <img src="assets/img/JasonBourne.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Jason Bourne</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 policierS">
                 <img src="assets/img/rezort.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Rezort</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 aventureS">
                 <img src="assets/img/peter.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Peter</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 policierS">
                 <img src="assets/img/isra.jpeg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">ISRA 88</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-            </div>
+            <!-- </div> -->
 
-            <div class="row">
-              <ul class="col-xs-6 col-md-2">
+            <!--  Ligne 4 des films-->
+            <!-- <div class="row"> -->
+              <ul class="col-xs-6 col-md-2 actionzS">
                 <img src="assets/img/warDogs.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">War Dogs</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 aventureS">
                 <img src="assets/img/otherSide.jpeg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">The other side</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 policierS">
                 <img src="assets/img/civilWar.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Civil War</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 aventureS">
                 <img src="assets/img/the-secret-life-of-pets-2016-16.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Pets</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 aventureS">
                 <img src="assets/img/jungleBook.jpg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Jungle Book</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-              <ul class="col-xs-6 col-md-2">
+              <ul class="col-xs-6 col-md-2 actionzS">
                 <img src="assets/img/assasinCreed.jpeg" alt="" class="img-responsive vignette">
                 <li class="l-movie-title">Assassin's Creed</li>
                 <li class="l-movie-year">2016</li>
               </ul>
-
-            </div>
           </div>
+        </div>
           <input type="button" value="PLUS DE SERIES" id="plusDeSeries">
-
-
 
         </div>
 
@@ -601,7 +620,7 @@
               <p id="next">></p></div>
 
               <div class="embed-responsive embed-responsive-16by9 col-md-6">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WxedhVmh8RM" frameborder="0" gesture="media"></iframe>
+                <iframe id="bandeAnnonce" class="embed-responsive-item" src="https://www.youtube.com/embed/WxedhVmh8RM" frameborder="0" gesture="media"></iframe>
               </div>
 
               <div class="col-md-6" id="civilWar">
@@ -687,11 +706,11 @@
         <div id="contact-header">
           <h2 class="titreBefore">Contact</h2>
         </div>
-      <div class="row" id="quads">
+      <!-- <div class="row" id="quads"> -->
 
 
 
-        <div class="col-xs-6 col-md-3 contact-item">
+        <div class="col-xs-6 col-md-3 contact-item" style="margin-left:0px;">
           <div class="rondOrange">
             <span class="glyphicon glyphicon-map-marker"></span>
           </div>
@@ -718,7 +737,7 @@
           <p>exemple3@gmail.com</p>
         </div>
 
-        <div class="col-xs-6 col-md-3 contact-item">
+        <div class="col-xs-6 col-md-3 contact-item" style="margin-right:0px;">
           <div class="rondOrange">
             <span class="glyphicon glyphicon-user"></span>
           </div>
@@ -736,7 +755,7 @@
                     <a href="#" class="btn white" id="boutonDroitGoogle">Google+</a>
                 </div>
 
-        </div>
+        <!-- </div> -->
       </div>
       <div class="row">
         <form class="form-horizontal" action="">
@@ -754,7 +773,7 @@
       <input type="text" class="form-control inputMargin" placeholder="SUBJECT" name="subject">
   </div>
   <div class="col-md-12">
-    <textarea rows="6" cols="144" placeholder="YOUR MESSAGE"></textarea>
+    <textarea rows="6" cols="142" placeholder="YOUR MESSAGE"></textarea>
 </div>
 
     <div class="col-md-2">
@@ -766,6 +785,295 @@
       </div>
     </section>
 
+    <!-- ...........................Les modals....................-->
+
+    <!-- Modal batman -->
+    <div id="batmanModal" class="modal fade" data-backdrop="static">
+      <div class="modal-dialog">
+        <!-- contenu du modal-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Lego Batman, le film</h2>
+          <div class="modal-body">
+
+            <div class="embed-responsive embed-responsive-16by9 col-md-12">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/9mznUFqFy74" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-md-12">
+              <table class="table borderless">
+
+                <tbody>
+                  <tr>
+                    <td>Réalisateur</td>
+                    <td>:</td>
+                    <td>Chris McKay</td>
+                  </tr>
+                  <tr>
+                    <td>Descritpion</td>
+                    <td>:</td>
+                    <td>Il en rêvait depuis La Grande Aventure Lego : Batman est enfin le héros de son propre film !
+                      Mais la situation a bien changé à Gotham – et s'il veut sauver la ville des griffes du Joker,
+                      il lui faudra arrêter de jouer au justicier masqué et découvrir le travail d'équipe !
+                      Peut-être pourra-t-il alors se décoincer un peu… </td>
+                  </tr>
+                  <tr>
+                    <td>Date de sortie</td>
+                    <td>:</td>
+                    <td>8 février 2017</td>
+                  </tr>
+                  <tr>
+                    <td>Genres</td>
+                    <td>:</td>
+                    <td>Animation</td>
+                  </tr>
+                  <tr>
+                    <td>Acteurs</td>
+                    <td>:</td>
+                    <td> Philippe Valmont, Rayane Bensetti, Stéphane Bern</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- ............................................Modal hostel...........................-->
+
+    <div id="hostelModal" class="modal fade" data-backdrop="static">
+      <div class="modal-dialog">
+        <!-- contenu du modal-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Hostel</h2>
+          <div class="modal-body">
+
+            <div class="embed-responsive embed-responsive-16by9 col-md-12">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/cVBdQiUHhZI" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-md-12">
+              <table class="table borderless">
+
+                <tbody>
+                  <tr>
+                    <td>Réalisateur</td>
+                    <td>:</td>
+                    <td>Eli Roth</td>
+                  </tr>
+                  <tr>
+                    <td>Descritpion</td>
+                    <td>:</td>
+                    <td>Deux étudiants américains, Paxton et Josh, ont décidé de découvrir l'Europe avec un maximum d'aventures et de sensations fortes.
+                        Avec Oli, un Islandais qu'ils ont rencontré en chemin, ils se retrouvent dans une petite ville de Slovaquie dans ce qu'on leur a décrit comme le nirvana des vacances de débauche :
+                       une propriété très spéciale, pleine de filles aussi belles que faciles...
+                        Natalya et Svetlana sont effectivement très cools...
+                        un peu trop, même. Paxton et Josh vont vite se rendre compte qu'ils sont tombés dans un piège. Ce voyage-là va les conduire au bout de l'horreur...  </td>
+                  </tr>
+                  <tr>
+                    <td>Date de sortie</td>
+                    <td>:</td>
+                    <td>1 mars 2006</td>
+                  </tr>
+                  <tr>
+                    <td>Genres</td>
+                    <td>:</td>
+                    <td>Epouvante-horreur</td>
+                  </tr>
+                  <tr>
+                    <td>Acteurs</td>
+                    <td>:</td>
+                    <td>Jay Hernandez, Derek Richardson, Eythor Gudjonsson</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- ..........................Modal inception....................................-->
+    <div id="inceptionModal" class="modal fade" data-backdrop="static">
+      <div class="modal-dialog">
+        <!-- contenu du modal-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Inception</h2>
+          <div class="modal-body">
+
+            <div class="embed-responsive embed-responsive-16by9 col-md-12">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PQvoKjade9k" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-md-12">
+              <table class="table borderless">
+
+                <tbody>
+                  <tr>
+                    <td>Réalisateur</td>
+                    <td>:</td>
+                    <td> Christopher Nolan</td>
+                  </tr>
+                  <tr>
+                    <td>Descritpion</td>
+                    <td>:</td>
+                    <td>Dom Cobb est un voleur expérimenté – le meilleur qui soit dans l’art périlleux de l’extraction : sa spécialité consiste à s’approprier
+                      les secrets les plus précieux d’un individu, enfouis au plus profond de son subconscient, pendant qu’il rêve et que son esprit est particulièrement vulnérable.
+                      Très recherché pour ses talents dans l’univers trouble de l’espionnage industriel, Cobb est aussi devenu un fugitif traqué dans le monde entier qui a perdu tout ce qui lui est cher.
+                      Mais une ultime mission pourrait lui permettre de retrouver sa vie d’avant – à condition qu’il puisse accomplir l’impossible : l’inception. </td>
+                  </tr>
+                  <tr>
+                    <td>Date de sortie</td>
+                    <td>:</td>
+                    <td>21 juillet 2010</td>
+                  </tr>
+                  <tr>
+                    <td>Genres</td>
+                    <td>:</td>
+                    <td>Science fiction, Thriller</td>
+                  </tr>
+                  <tr>
+                    <td>Acteurs</td>
+                    <td>:</td>
+                    <td> Leonardo DiCaprio, Marion Cotillard, Ellen Page</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- ..........................Modal intouchable....................................-->
+    <div id="intouchableModal" class="modal fade" data-backdrop="static">
+      <div class="modal-dialog">
+        <!-- contenu du modal-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Intouchable</h2>
+          <div class="modal-body">
+
+            <div class="embed-responsive embed-responsive-16by9 col-md-12">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cXu2MhWYUuE" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-md-12">
+              <table class="table borderless">
+
+                <tbody>
+                  <tr>
+                    <td>Réalisateur</td>
+                    <td>:</td>
+                    <td> Eric Toledano, Olivier Nakache </td>
+                  </tr>
+                  <tr>
+                    <td>Descritpion</td>
+                    <td>:</td>
+                    <td>A la suite d’un accident de parapente, Philippe, riche aristocrate,
+                      engage comme aide à domicile Driss, un jeune de banlieue tout juste sorti de prison. Bref la personne la moins adaptée pour le job.
+                       Ensemble ils vont faire cohabiter Vivaldi et Earth Wind and Fire, le verbe et la vanne, les costumes et les bas de survêtement...
+                       Deux univers vont se télescoper, s’apprivoiser, pour donner naissance à une amitié aussi dingue, drôle et forte qu’inattendue,
+                       une relation unique qui fera des étincelles et qui les rendra... Intouchables.  </td>
+                  </tr>
+                  <tr>
+                    <td>Date de sortie</td>
+                    <td>:</td>
+                    <td>21 juillet 2010</td>
+                  </tr>
+                  <tr>
+                    <td>Genres</td>
+                    <td>:</td>
+                    <td>Comédie</td>
+                  </tr>
+                  <tr>
+                    <td>Acteurs</td>
+                    <td>:</td>
+                    <td>François Cluzet, Omar Sy, Anne Le Ny</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- ..........................Modal Seigneur des anneaux....................................-->
+    <div id="seigneurModal" class="modal fade" data-backdrop="static">
+      <div class="modal-dialog">
+        <!-- contenu du modal-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2>Le Seigneur des Anneaux: Les deux tours</h2>
+          <div class="modal-body">
+
+            <div class="embed-responsive embed-responsive-16by9 col-md-12">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/c9blKqmyeV4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-md-12">
+              <table class="table borderless">
+
+                <tbody>
+                  <tr>
+                    <td>Réalisateur</td>
+                    <td>:</td>
+                    <td>Peter Jackson</td>
+                  </tr>
+                  <tr>
+                    <td>Descritpion</td>
+                    <td>:</td>
+                    <td>Après la mort de Boromir et la disparition de Gandalf, la Communauté s'est scindée en trois. Perdus dans les collines d'Emyn Muil, Frodon et Sam découvrent qu'ils sont suivis par Gollum,
+                      une créature versatile corrompue par l'Anneau. Celui-ci promet de conduire les Hobbits jusqu'à la Porte Noire du Mordor. A travers la Terre du Milieu,
+                       Aragorn, Legolas et Gimli font route vers le Rohan, le royaume assiégé de Theoden.</td>
+                  </tr>
+                  <tr>
+                    <td>Date de sortie</td>
+                    <td>:</td>
+                    <td> 18 décembre 2002</td>
+                  </tr>
+                  <tr>
+                    <td>Genres</td>
+                    <td>:</td>
+                    <td>Fantastique, Aventure, Action</td>
+                  </tr>
+                  <tr>
+                    <td>Acteurs</td>
+                    <td>:</td>
+                    <td>Elijah Wood, Sean Astin, Viggo Mortensen</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
   </main>
 
     <!-- FOOTER -->

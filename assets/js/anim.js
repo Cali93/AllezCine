@@ -55,6 +55,13 @@
     docRoot.removeChild(okC);
   }
 
+  // let subAge = document.getElementById('submitAge')
+  // subAge.addEventListener('click', function(){
+  //   let cookieExpire = new Date();
+  //   cookieExpire.setFullYear(cookieExpire.getFullYear() +2);
+  //   document.cookie="submitAge>=18; expires=" + cookieExpire.toGMTString() + ";";
+  // })
+
 })();
 
 // Plus de films
@@ -86,33 +93,6 @@ seriesBtn.addEventListener("click", function(){
       seriesBtn.value = 'PLUS DE SERIES'
     }
 });
-
-//SHOW ALL MOVIES
-
-let buttonall = document.getElementById('allMovies');
-buttonall.addEventListener ('click',function() {
-  let aventure = document.getElementById('aventure');
-  let action = document.getElementById('actionz');
-  let policier = document.getElementById('policier');
-  if (aventure.style.display === 'none' || action.style.display === 'none' || policier.style.display === 'none'){
-    aventure.style.display = 'block';
-    action.style.display = 'block';
-    policier.style.display = 'block';
-  }
-})
-
-// SHOW ACTION MOVIES
-let buttonAction = document.getElementById('actionMovies');
-buttonAction.addEventListener ('click',function() {
-  let aventure = document.getElementById('aventure');
-  let action = document.getElementById('actionz');
-  let policier = document.getElementById('policier');
-  if (aventure.style.display === 'block' || action.style.display === 'block' || policier.style.display === 'block'){
-    aventure.style.display = 'none';
-    policier.style.display = 'none';
-    action.style.display = 'block';
-  }
-})
 
 // LOGIN BUTTON
 
@@ -202,6 +182,84 @@ $(function() {
             $iconTag.removeClass($iconClass + " " + $divClass);
   		}, $msgShowTime);
     }
+
+// MOVIES DISPLAY
+    $('#allMovies').click(function() {
+      $('.actionz').show()
+      $('.aventure').show()
+      $('.policier').show()
+      $("#hiddenM").hide()
+      $("#plusDeFilms").show()
+    })
+
+    // SHOW ACTION MOVIES
+
+    $('#actionMovies').click(function() {
+      $('.actionz').show()
+      $('.aventure').hide()
+      $('.policier').hide()
+      $("#hiddenM").css("display", "block");
+      $("#plusDeFilms").hide()
+    })
+
+    // SHOW Adv MOVIES
+
+    $('#Aventures').click(function() {
+      $('.actionz').hide()
+      $('.aventure').show()
+      $('.policier').hide()
+      $("#hiddenM").css("display", "block");
+      $("#plusDeFilms").hide()
+    })
+
+    // SHOW Policier MOVIES
+
+    $('#policierMovies').click(function() {
+      $('.actionz').hide()
+      $('.aventure').hide()
+      $('.policier').show()
+      $("#hiddenM").css("display", "block");
+      $("#plusDeFilms").hide()
+    })
+
+    // SERIES DISPLAY
+    $('#allSeries').click(function() {
+      $('.actionzS').show()
+      $('.aventureS').show()
+      $('.policierS').show()
+      $("#hiddenS").hide()
+      $("#plusDeSeries").show()
+    })
+
+    // SHOW ACTION MOVIES
+
+    $('#actionSeries').click(function() {
+      $('.actionzS').show()
+      $('.aventureS').hide()
+      $('.policierS').hide()
+      $("#hiddenS").css("display", "block");
+      $("#plusDeSeries").hide()
+    })
+
+    // SHOW Adv MOVIES
+
+    $('#AventuresSeries').click(function() {
+      $('.actionzS').hide()
+      $('.aventureS').show()
+      $('.policierS').hide()
+      $("#hiddenS").css("display", "block");
+      $("#plusDeSeries").hide()
+    })
+
+    // SHOW Policier MOVIES
+
+    $('#policierSeries').click(function() {
+      $('.actionzS').hide()
+      $('.aventureS').hide()
+      $('.policierS').show()
+      $("#hiddenS").css("display", "block");
+      $("#plusDeSeries").hide()
+    })
 });
 
 // FOOTER BUTTON
@@ -216,3 +274,117 @@ let footerBtnText = document.createTextNode ('⇡')
   footerBtn.appendChild(footerBtnText)
   aBtn.appendChild(footerBtn)
   footerSection.appendChild(aBtn)
+
+
+
+// FONCTIONS COOKIE AGE
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user = getCookie("username");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) {
+            setCookie("username", user, 365);
+        }
+    }
+}
+
+// Submit with enter
+$('.input').keypress(function (e) {
+  if (e.which == 13) {
+    $('form#ageFrom').submit();
+    return false;
+  }
+});
+  // DEMANDE AGE
+document.getElementById('submitAge').addEventListener('click',functionAge);
+
+function functionAge(e){
+      e.preventDefault();
+      var age = document.getElementById("age").value;
+      var submitAge = document.getElementById("submitAge");
+      var txt = document.getElementById("reponse");
+
+      if (age == "" || age == null){
+            txt.innerHTML ="Veuillez entrer un age";
+            console.log("Veuillez entrer un age");
+      }
+      else{
+            if (age>=18){
+                  // console.log("ok entrez");
+            var hide = document.getElementById("blockBlanc");
+            hide.classList.add('hide');
+            }
+            else if (age<=17){
+                  window.location = "https://www.youtube.com/watch?v=rCPBvzML6-A";
+                  // txt.innerHTML ="Vous etes trop petit";
+                  // console.log("Vous etes trop petit");
+            }
+      }
+}
+
+
+
+
+
+// Modal Batman.................................
+
+document.getElementById('batmanModalImage').addEventListener('click',modalBatman);
+
+function modalBatman(e){
+      e.preventDefault();
+
+}
+
+// Modal Hostel................................
+document.getElementById('hostelModalImage').addEventListener('click',hostelModal);
+
+function hostelModal(e){
+      e.preventDefault();
+
+}
+// Modal inception................................
+document.getElementById('inceptionModalImage').addEventListener('click',inceptionModal);
+
+function inceptionModal(e){
+      e.preventDefault();
+
+}
+// Modal intouchable................................
+document.getElementById('intouchableModalImage').addEventListener('click',intouchableModal);
+
+function intouchableModal(e){
+      e.preventDefault();
+
+}
+// Modal Seigneur des anneaux les deux tours................................
+document.getElementById('seigneurModalImage').addEventListener('click',seigneurModal);
+
+function seigneurModal(e){
+      e.preventDefault();
+
+}
