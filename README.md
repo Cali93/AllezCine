@@ -35,3 +35,6 @@
   + popup cookie
   + changement de film du shop
   + dans la modal : animation login, changement de contenu au click
+
+
+![Aperçu](https://ibb.co/cNFM0G)
