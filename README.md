@@ -37,4 +37,4 @@
   + dans la modal : animation login, changement de contenu au click
 
 
-![Aperçu](https://ibb.co/cNFM0G)
+![Aperçu](https://preview.ibb.co/dXh10G/Rent_Movies_TI_Front_End_Allez_Cine_Master.png)
