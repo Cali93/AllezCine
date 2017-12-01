@@ -55,13 +55,6 @@
     docRoot.removeChild(okC);
   }
 
-  // let subAge = document.getElementById('submitAge')
-  // subAge.addEventListener('click', function(){
-  //   let cookieExpire = new Date();
-  //   cookieExpire.setFullYear(cookieExpire.getFullYear() +2);
-  //   document.cookie="submitAge>=18; expires=" + cookieExpire.toGMTString() + ";";
-  // })
-
 })();
 
 // Plus de films
@@ -198,7 +191,7 @@ $(function() {
       $('.actionz').show()
       $('.aventure').hide()
       $('.policier').hide()
-      $("#hiddenM").css("display", "block");
+      $("#hiddenM").show()
       $("#plusDeFilms").hide()
     })
 
@@ -260,6 +253,61 @@ $(function() {
       $("#hiddenS").css("display", "block");
       $("#plusDeSeries").hide()
     })
+
+    // SHOW MOVIES TRAILER WAR DOGS
+
+    $("#WarDogsBtn").click(function(){
+     $("#bandeAnnonce").attr("src", "https://www.youtube.com/embed/Rwh9c_E3dJk");
+     $("#tableTitle").text("War Dogs");
+    })
+
+    $("#OtherSideBtn").click(function(){
+      $("#bandeAnnonce").attr("src", "https://www.youtube.com/embed/crrey841i5E");
+      $("#tableTitle").text("Other Side");
+    })
+
+    $("#CivilWarBtn").click(function(){
+      $("#bandeAnnonce").attr("src", "https://www.youtube.com/embed/WxedhVmh8RM");
+      $("#tableTitle").text("Civil War");
+    })
+
+    $("#PetsBtn").click(function(){
+      $("#bandeAnnonce").attr("src", "https://www.youtube.com/embed/QIMZG_1L9Vk");
+      $("#tableTitle").text("Pets");
+    })
+
+    $("#JungleBtn").click(function(){
+      $("#bandeAnnonce").attr("src", "https://www.youtube.com/embed/4CXdo2gMtCM");
+      $("#tableTitle").text("Jungle Book");
+    })
+
+    $("#AssassinBtn").click(function(){
+      $("#bandeAnnonce").attr("src", "https://www.youtube.com/embed/R-n1b6ZrBc8");
+      $("#tableTitle").text("Assassin's Creed");
+    })
+
+    $(function() {
+    var nextBtn = $("#next"),
+        prevBtn = $("#prev");
+
+    nextBtn.on('click', function(e) {
+        var active = $(".active");
+        var next = active.next('.case');
+        if (next.length) {
+            active.removeClass('active');
+            next.addClass('active');
+        }
+    });
+    prevBtn.on('click', function(e) {
+        var active = $(".active");
+        var prev = active.prev('.case');
+        if (prev.length) {
+            active.removeClass('active');
+            prev.addClass('active');
+        }
+    });
+});
+
 });
 
 // FOOTER BUTTON
@@ -386,45 +434,5 @@ document.getElementById('seigneurModalImage').addEventListener('click',seigneurM
 
 function seigneurModal(e){
       e.preventDefault();
-
-}
-
-document.getElementById('next').addEventListener('click',functionNext);
-function functionNext(e){
-    e.preventDefault();
-    var un = document.getElementById('un');
-    var deux = document.getElementById('deux');
-    var trois = document.getElementById('trois');
-    var quatre = document.getElementById('quatre');
-    var cinq = document.getElementById('cinq');
-    var six = document.getElementById('six');
-    var sept = document.getElementById('sept');
-    var huit = document.getElementById('huit');
-
-
-var toto= 0;
-switch(toto){
-  case 1:
-  var suivant = document.getElementById('deux');
-  var precedent = document.getElementById('un');
-  suivant.classList.remove('hide');
-  precedent.classList.add('hide');
-  break;
-
-  case 2:
-  var suivant = document.getElementById('trois');
-  var precedent = document.getElementById('deux');
-  suivant.classList.remove('hide');
-  precedent.classList.add('hide');
-  break;
-
-  case 3:
-  var suivant = document.getElementById('quatre');
-  var precedent = document.getElementById('trois');
-  suivant.classList.remove('hide');
-  precedent.classList.add('hide');
-
-}
-
 
 }
